@@ -1,0 +1,184 @@
+@font-face {
+    font-weight: 100; /* Соответствует значению normal */
+    font-family: 'AmbexThin';
+    src: url("img/AmbexThin.ttf");
+  }
+
+html,
+body{   
+    height: auto; 
+    font-family: "AmbexThin";
+    color: white;
+    background-image: linear-gradient(to bottom, #000000, #1e0614, #2a0b29, #2c1246, #072169);
+    background-repeat: no-repeat;   
+}
+
+.grid * {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.grid{
+    height: 100%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+}
+header{
+    grid-area: header;
+    border-bottom: aqua 2px solid;
+}
+aside{
+    background: rgba(0,0,0,0.7);
+    border: 45px solid ; 
+    border-image: url("img/border.png");
+    border-image-slice: 100;
+    border-image-repeat:stretch;
+    border-image-outset:5px;
+    grid-area: aside;
+}
+.main-items{ 
+    margin-right: 20px;
+    border: 45px solid ; 
+    border-image: url("img/border.png");
+    border-image-slice: 100;
+    border-image-repeat:stretch;
+    border-image-outset:5px;
+    background-image: repeating-linear-gradient(0deg, rgba(55, 98, 141, 0.6), rgba(55, 98, 141, 0.6) 1px, transparent 0.5px, transparent);
+    background-size: 10px 3px;
+    background-color: rgba(0, 0, 0, 0.2) ;
+    background-attachment: fixed;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: repeat(4, minmax(100px, auto));
+    grid-gap: 10px;
+    grid-template-areas: 
+    "avatar personal"
+    "education education"
+    "experience experience"
+    "quality skills";
+}
+footer{
+    grid-area: footer;
+    margin-left: 0px;
+    border-top: aqua 2px solid;
+    background-color: #000000;
+}
+.main-items *{    
+   
+    text-align: left;
+}
+.avatar{    
+    grid-area: avatar;
+    
+}
+.personal{
+    grid-area: personal;
+}
+.education{
+    grid-area: education;
+}
+.experience{
+    grid-area: experience;
+}
+.skills{
+    grid-area: skills;
+}
+.quality{
+    grid-area: quality;
+}
+.skills-list{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, minmax(100px,1fr));
+    grid-template-rows: auto;
+    padding: 0;    
+}
+.skills-item{
+    list-style-type: none;
+    text-align: center;
+}
+.ava{
+    border: 5px solid ; 
+    border-image: url("img/border.png");
+    border-image-slice: 35;
+    border-image-repeat:stretch;
+    width:100%;      
+    padding: 0;
+}
+h1{
+    color:rgb(0, 255, 208);
+}
+b{
+    margin-right: 10px;
+    color:aqua;
+}
+i{
+    color:rgb(176, 251, 251);
+}
+.contact-item{
+    display: inline-block;
+}
+
+.hobbies-grid * {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.hobbies-grid{
+    height: 100%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 100px minmax(100px,auto) 1fr 100px;
+    grid-template-areas: 
+    "header header"
+    "aside section"
+    "aside main"
+    "footer footer";
+}
+.section{
+    background-size: 10px 3px;
+    background-color: rgba(0, 0, 0, 0.6) ;
+    border-left: #1d98d5 20px solid;
+    border-right: #1d98d5 20px solid;
+    border-top-left-radius: 20px;
+    /* border-bottom-left-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    border-bottom-right-radius: 20px;
+    grid-area: section;    
+}
+.section *{
+    margin-left: 30px;
+    text-align: left;
+    line-height: 150%;
+}
+.main-hobbies-items{
+    margin-right: 20px;
+    border: 45px solid ; 
+    border-image: url("img/border.png");
+    border-image-slice: 100;
+    border-image-repeat:stretch;
+    border-image-outset:5px;
+    background-image: repeating-linear-gradient(0deg, rgba(55, 98, 141, 0.6), rgba(55, 98, 141, 0.6) 1px, transparent 0.5px, transparent);
+    background-size: 10px 3px;
+    background-color: rgba(0, 0, 0, 0.2) ;
+    background-attachment: fixed;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(100px, auto));
+    grid-column-gap: 10px;
+    grid-row-gap: 50px ;
+}
+.hobbies-img{
+    border: white 2px solid ;     
+    width:100%;      
+    padding: 0;
+}
